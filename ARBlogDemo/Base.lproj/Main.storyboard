@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fop-ff-zso">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="LEb-dr-qRn">
+            <objects>
+                <viewController id="fop-ff-zso" customClass="ViewController" customModule="ARBlogDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZ0-W0-JSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="di8-aC-9nF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0W-xZ-6I0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fop-ff-zso" id="Yfv-Yg-yPv"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Initializing AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-dE-bOE">
+                                <rect key="frame" x="0.0" y="54" width="375" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="jnI-Qg-Is3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="di8-aC-9nF" firstAttribute="top" secondItem="wZ0-W0-JSo" secondAttribute="top" id="NGb-ab-hvs"/>
+                            <constraint firstItem="xfH-dE-bOE" firstAttribute="top" secondItem="LiH-e6-gEr" secondAttribute="top" constant="10" id="OZR-8L-T5w"/>
+                            <constraint firstItem="xfH-dE-bOE" firstAttribute="leading" secondItem="LiH-e6-gEr" secondAttribute="leading" id="QXD-Ux-4Fp"/>
+                            <constraint firstItem="r0W-xZ-6I0" firstAttribute="leading" secondItem="LiH-e6-gEr" secondAttribute="leading" id="UAV-Ko-DNv"/>
+                            <constraint firstAttribute="top" secondItem="r0W-xZ-6I0" secondAttribute="top" id="XlZ-Q0-reO"/>
+                            <constraint firstItem="LiH-e6-gEr" firstAttribute="trailing" secondItem="xfH-dE-bOE" secondAttribute="trailing" id="cQB-aC-Wie"/>
+                            <constraint firstItem="r0W-xZ-6I0" firstAttribute="top" secondItem="di8-aC-9nF" secondAttribute="bottom" id="fwS-sy-TKi"/>
+                            <constraint firstItem="di8-aC-9nF" firstAttribute="leading" secondItem="wZ0-W0-JSo" secondAttribute="leading" id="iCy-Je-VD3"/>
+                            <constraint firstAttribute="bottom" secondItem="r0W-xZ-6I0" secondAttribute="bottom" id="jhy-QD-tSb"/>
+                            <constraint firstItem="LiH-e6-gEr" firstAttribute="trailing" secondItem="di8-aC-9nF" secondAttribute="trailing" id="kL6-xH-g0b"/>
+                            <constraint firstItem="LiH-e6-gEr" firstAttribute="trailing" secondItem="r0W-xZ-6I0" secondAttribute="trailing" id="pql-sf-pUa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LiH-e6-gEr"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="xfH-dE-bOE" id="SUO-NZ-kob"/>
+                        <outlet property="sceneView" destination="r0W-xZ-6I0" id="Flu-5c-zbU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WtF-ki-EvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3a8-pV-dfu" customClass="SCNScene"/>
+            </objects>
+            <point key="canvasLocation" x="1029.5999999999999" y="-223.15270935960592"/>
+        </scene>
+    </scenes>
+</document>
